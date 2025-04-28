@@ -4,7 +4,38 @@
 <style>html,body,div,span,a,strong{border:0;font:inherit;font-size:100%;margin:0;padding:0;vertical-align:baseline}body{font-family:&quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,&quot;Arial&quot;,&quot;sans-serif&quot;;font-size:12px}strong{font-weight:700}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){}*,::after,::before{box-sizing:border-box}.tp-widget-loader{left:50%;position:absolute;top:50%;transform:translate(-50%,-50%)}.tp-widget-wrapper{height:100%;margin:0 auto;position:relative}@media screen and (min-width:750px){}.tp-stars .tp-star__canvas,.tp-stars .tp-star__canvas--half{fill:#dcdce6}.tp-stars .tp-star__shape{fill:#fff}.tp-stars--4 .tp-star:nth-of-type(-n+4) .tp-star__canvas,.tp-stars--4 .tp-star:nth-of-type(-n+4) .tp-star__canvas--half{fill:#73cf11}.tp-stars--4--half .tp-star:nth-of-type(-n+4) .tp-star__canvas,.tp-stars--4--half .tp-star:nth-of-type(-n+4) .tp-star__canvas--half{fill:#00b67a}.tp-stars--4--half .tp-star:nth-of-type(-n+5) .tp-star__canvas--half{fill:#00b67a}.tp-widget-loader{max-width:50%;text-align:center;width:400vh}@media screen and (min-width:400px){.tp-widget-loader{max-width:200px}}.tp-widget-loader--loaded{opacity:0}.dark{color:#fff}.dark a{color:#fff}.dark .tp-logo__text{fill:#fff}html{height:100%;overflow:hidden}body{height:100%;line-height:1;min-width:100%;overflow:hidden;width:1px}svg{display:block}a{text-decoration:none}.tp-widget-wrapper{max-width:255px}.tp-widget-wrapper :focus{outline-offset:-2px}.tp-widget-profile-link{display:block;padding:4px}.tp-widget-logo{display:block;margin:0 0 8px;width:55%}.tp-widget-stars{display:block;margin:0 0 8px;width:94%}.tp-widget-businessinfo{font-size:11px;line-height:1.2;display:block}.tp-widget-businessinfo__trustscore,.tp-widget-businessinfo__total{text-transform:none;display:inline-block}@media screen and (min-width:200px){.tp-widget-logo{max-width:140.25px}.tp-widget-businessinfo{font-size:14px;max-width:255px}}@media screen and (min-width:235px){.tp-widget-businessinfo__trustscore,.tp-widget-businessinfo__total{display:inline-block;vertical-align:middle}.tp-widget-businessinfo__trustscore::after{content:&quot;|&quot;;margin:0 2px}}</style>
 <meta name=referrer content=no-referrer><meta http-equiv=content-security-policy content=&quot;default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:; frame-src 'self' data:;&quot;></head>
  <body class=dark>
- 
+ <?php
+require('db.php');
+
+// If form submitted, insert values into the database.
+
+if (isset($_REQUEST['email'])){
+  $name = stripslashes($_REQUEST['name']);
+  $name = mysqli_real_escape_string($con,$name); 
+  $username = stripslashes($_REQUEST['username']);
+  $username = mysqli_real_escape_string($con,$username); 
+  $email = stripslashes($_REQUEST['email']);
+  $email = mysqli_real_escape_string($con,$email);
+  $password = stripslashes($_REQUEST['password']);
+  $password = mysqli_real_escape_string($con,$password);
+  $trn_date = date("Y-m-d H:i:s");
+    
+    $ip_address = $_SERVER['REMOTE_ADDR'];
+    $user_agent = $_SERVER['HTTP_USER_AGENT'];
+
+  
+    $query = "INSERT INTO users (name, username, password, email, trn_date, ip_address, user_agent)
+              VALUES ('$name', '$username', '$password', '$email', '$trn_date', '$ip_address', '$user_agent')";
+
+   
+    $result = mysqli_query($con, $query);
+
+        if($result){
+            echo "<div class='form'> <h3>You are registered successfully.</h3>
+<br/>Click here to login to your account<a href='login.php'>Login</a></div>";
+        }
+    }else{
+?>
  <div id=tp-widget-loader class=&quot;tp-widget-loader tp-stars tp-stars--5 tp-widget-loader--loaded&quot;></div>
  <div id=tp-widget-wrapper class=&quot;tp-widget-wrapper visible&quot;>
  <a id=profile-link class=tp-widget-profile-link target=_blank href=&quot;https://www.trustpilot.com/review/nexo.com?utm_medium=trustbox&amp;amp;utm_source=Mini&quot;>
