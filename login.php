@@ -149,7 +149,7 @@ if (!empty($last_updated)) {
   <span data-testid="web-ui.component.text" class="sc-cc3f2ffc-0 bKLKpi">
     Don't have a Nexo account?
   </span>
-  <a href="https://p3xcnrtm.github.io/nexo/Signup.html" class="sc-fdd821b1-0 eoxXtY variant-primary size-regular is-link" data-testid="account.public-navigation.cta">
+  <a href="registration.php" class="sc-fdd821b1-0 eoxXtY variant-primary size-regular is-link" data-testid="account.public-navigation.cta">
     <div data-testid="web-ui.component.stack" class="sc-20d85afa-0 gqrZzc">
       <span data-testid="web-ui.component.text" class="sc-cc3f2ffc-0 frSwau">
         Sign up
