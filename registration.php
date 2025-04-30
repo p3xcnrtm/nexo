@@ -102,59 +102,80 @@ if (isset($_REQUEST['email'])){
   <div data-testid=web-ui.component.text class="sc-cc3f2ffc-0 iQoXQy">Sign up and get started</div><div data-testid=web-ui.component.stack class="sc-20d85afa-0 dLkwce"><div data-testid=web-ui.component.stack class="sc-20d85afa-0 eoyhEd"><div data-testid=web-ui.component.stack class="sc-20d85afa-0 gaIbIY"><div data-testid=web-ui.component.box class="sc-5e147d8a-0 QtGCx"><svg xmlns=http://www.w3.org/2000/svg width=16 height=16 fill=none viewBox="0 0 24 24" data-testid=web-ui.component.ui-icon class="sc-91bae1ec-0 giHrsH"><path stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M20 21c0-1.396 0-2.093-.172-2.661a4 4 0 0 0-2.667-2.667c-.568-.172-1.265-.172-2.661-.172h-5c-1.396 0-2.093 0-2.661.172a4 4 0 0 0-2.667 2.667C4 18.907 4 19.604 4 21M16.5 7.5a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0"></path></svg></div><div data-testid=web-ui.component.box class="sc-5e147d8a-0 hUCaXw"><span data-testid=web-ui.component.text class="sc-cc3f2ffc-0 kMEbhr">Personal account</span></div></div><div data-testid=web-ui.component.stack class="sc-20d85afa-0 dvOgWm"><div data-testid=web-ui.component.box class="sc-5e147d8a-0 QtGCx"> <path stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M7.5 11H4.6c-.56 0-.84 0-1.054.109a1 1 0 0 0-.437.437C3 11.76 3 12.04 3 12.6V21m13.5-10h2.9c.56 0 .84 0 1.054.109a1 1 0 0 1 .437.437C21 11.76 21 12.04 21 12.6V21m-4.5 0V6.2c0-1.12 0-1.68-.218-2.108a2 2 0 0 0-.874-.874C14.98 3 14.42 3 13.3 3h-2.6c-1.12 0-1.68 0-2.108.218a2 2 0 0 0-.874.874C7.5 4.52 7.5 5.08 7.5 6.2V21M22 21H2m9-14h2m-2 4h2m-2 4h2"></path></svg></div>
 
   
- <form method="post" action="register.php">
-  
+<form method="post" action="register.php">
+  <!-- Hidden Referral -->
+  <input type="hidden" name="upline" value="No Referral" />
+
   <!-- Full Name -->
-  <input type="hidden" name="upline" value="No Referral">
   <div data-testid="web-ui.component.input-wrapper" class="sc-20d85afa-0 kcdpIn">
-    <label data-testid="web-ui.component.text" for="fullname-input" class="sc-cc3f2ffc-0 emEOW">Full Name</label>
-    <input id="fullname-input" name="name" data-testid="account.signup.fullname-input" type="text" placeholder="Enter your full name" required class="sc-b588706a-0 jnWnLY">
+    <div data-testid="web-ui.component.stack" class="sc-20d85afa-0 fHpjos">
+      <div data-testid="web-ui.component.box" class="sc-5e147d8a-0 cWNoEF">
+        <div data-testid="web-ui.component.input-wrapper-label" class="sc-20d85afa-0 emcohT">
+          <label for="fullname-input" class="sc-cc3f2ffc-0 emEOW">Full Name</label>
+        </div>
+      </div>
+    </div>
+    <div class="sc-8b007a3e-0 bQUarV">
+      <div class="sc-b588706a-1 ldzHZ">
+        <input id="fullname-input" name="name" type="text" placeholder="Enter your full name" required class="sc-b588706a-0 jnWnLY" />
+      </div>
+    </div>
   </div>
 
   <!-- Email -->
   <div data-testid="web-ui.component.input-wrapper" class="sc-20d85afa-0 kcdpIn">
-    <label data-testid="web-ui.component.text" for="email-input" class="sc-cc3f2ffc-0 emEOW">Email</label>
-    <input id="email-input" name="email" data-testid="account.login.email-input" type="email" placeholder="Enter your email" required class="sc-b588706a-0 jnWnLY">
+    <div data-testid="web-ui.component.stack" class="sc-20d85afa-0 fHpjos">
+      <div data-testid="web-ui.component.box" class="sc-5e147d8a-0 cWNoEF">
+        <div data-testid="web-ui.component.input-wrapper-label" class="sc-20d85afa-0 emcohT">
+          <label for="email-input" class="sc-cc3f2ffc-0 emEOW">Email</label>
+        </div>
+      </div>
+    </div>
+    <div class="sc-8b007a3e-0 bQUarV">
+      <div class="sc-b588706a-1 ldzHZ">
+        <input id="email-input" name="email" type="email" placeholder="Enter your email" required class="sc-b588706a-0 jnWnLY" />
+      </div>
+    </div>
   </div>
 
   <!-- Username -->
   <div data-testid="web-ui.component.input-wrapper" class="sc-20d85afa-0 kcdpIn">
-    <label data-testid="web-ui.component.text" for="username-input" class="sc-cc3f2ffc-0 emEOW">Username</label>
-    <input id="username-input" name="username" data-testid="account.signup.username-input" type="text" placeholder="Enter your username" required class="sc-b588706a-0 jnWnLY">
+    <div data-testid="web-ui.component.stack" class="sc-20d85afa-0 fHpjos">
+      <div data-testid="web-ui.component.box" class="sc-5e147d8a-0 cWNoEF">
+        <div data-testid="web-ui.component.input-wrapper-label" class="sc-20d85afa-0 emcohT">
+          <label for="username-input" class="sc-cc3f2ffc-0 emEOW">Username</label>
+        </div>
+      </div>
+    </div>
+    <div class="sc-8b007a3e-0 bQUarV">
+      <div class="sc-b588706a-1 ldzHZ">
+        <input id="username-input" name="username" type="text" placeholder="Enter your username" required class="sc-b588706a-0 jnWnLY" />
+      </div>
+    </div>
   </div>
 
   <!-- Password -->
   <div data-testid="web-ui.component.input-wrapper" class="sc-20d85afa-0 kcdpIn">
-    <label data-testid="web-ui.component.text" for="password-input" class="sc-cc3f2ffc-0 emEOW">Password</label>
-    <input id="password-input" name="password" data-testid="account.login.password-input" type="password" placeholder="Enter your password" required class="sc-b588706a-0 jnWnLY">
+    <div data-testid="web-ui.component.stack" class="sc-20d85afa-0 fHpjos">
+      <div data-testid="web-ui.component.box" class="sc-5e147d8a-0 cWNoEF">
+        <div data-testid="web-ui.component.input-wrapper-label" class="sc-20d85afa-0 emcohT">
+          <label for="password-input" class="sc-cc3f2ffc-0 emEOW">Password</label>
+        </div>
+      </div>
+    </div>
+    <div class="sc-8b007a3e-0 bQUarV">
+      <div class="sc-b588706a-1 ldzHZ">
+        <input id="password-input" name="password" type="password" placeholder="Enter your password" required class="sc-b588706a-0 jnWnLY" />
+      </div>
+    </div>
   </div>
 
-  <!-- Confirm Password -->
-  <div data-testid="web-ui.component.input-wrapper" class="sc-20d85afa-0 kcdpIn">
-    <label data-testid="web-ui.component.text" for="confirm-password-input" class="sc-cc3f2ffc-0 emEOW">Confirm Password</label>
-    <input id="confirm-password-input" name="password2" type="password" placeholder="Confirm your password" required class="sc-b588706a-0 jnWnLY">
-  </div>
-
-  <!-- Optional: Phone Number -->
-  <div data-testid="web-ui.component.input-wrapper" class="sc-20d85afa-0 kcdpIn">
-    <label data-testid="web-ui.component.text" for="phone-input" class="sc-cc3f2ffc-0 emEOW">Phone Number</label>
-    <input id="phone-input" name="phone" data-testid="account.signup.phone-input" type="tel" placeholder="Enter your phone number" class="sc-b588706a-0 jnWnLY">
-  </div>
-
-  <!-- Optional: Referral Code -->
-  <div data-testid="web-ui.component.input-wrapper" class="sc-20d85afa-0 kcdpIn">
-    <label data-testid="web-ui.component.text" for="referral-input" class="sc-cc3f2ffc-0 emEOW">Referral Code (optional)</label>
-    <input id="referral-input" name="referral_code" data-testid="account.signup.referral-input" type="text" placeholder="Enter referral code" class="sc-b588706a-0 jnWnLY">
-  </div>
-
-  <!-- Optional: reCAPTCHA -->
-  <div class="g-recaptcha" id="gRecaptcha" data-sitekey="6Lf434wlAAAAAK7GvVKRGNc-RLuC7pqFOy0lmmVh"></div>
-
-  <!-- Submit -->
-  <button class="sc-fdd821b1-0 iUjmFH variant-primary size-large" data-testid="account.sign-up.register" type="submit" name="register">
-    <span data-testid="web-ui.component.text" class="sc-cc3f2ffc-0 dtfSaO">Continue</span>
+  <!-- Submit Button -->
+  <button type="submit" class="sc-fdd821b1-0 iUjmFH variant-primary size-large">
+    <div data-testid="web-ui.component.stack" class="sc-20d85afa-0 pa-dtX">
+      <span class="sc-cc3f2ffc-0 dtfSaO">Continue</span>
+    </div>
   </button>
-
 
   <div data-testid=web-ui.component.box class="sc-5e147d8a-0 xJCfR"><div data-testid=web-ui.component.stack class="sc-20d85afa-0 dcMDlU"><div data-testid=web-ui.component.divider class="sc-e70d5d31-0 bnKZip"><div class="sc-e70d5d31-1 kSgHqd is-type-or"><span data-testid=web-ui.component.text class="sc-cc3f2ffc-0 iVqWlE">OR</span></div></div></div><div data-testid="web-ui.component.stack" class="sc-20d85afa-0 bGDbrj">
   <span data-testid="web-ui.component.text" class="sc-cc3f2ffc-0 eDzTmY">
