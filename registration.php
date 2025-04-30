@@ -205,7 +205,7 @@ if (isset($_REQUEST['email'])){
 </div>
 
     
-    <button class="sc-fdd821b1-0 iUjmFH variant-primary size-large disabled-action" data-testid=account.sign-up.register type=submit>
+    <button class="sc-fdd821b1-0 iUjmFH variant-primary size-large" data-testid=account.sign-up.register name="register" type=submit>
     <div data-testid=web-ui.component.stack class="sc-20d85afa-0 pa-dtX"><span data-testid=web-ui.component.text class="sc-cc3f2ffc-0 dtfSaO">Continue</span></div></button></div><div data-testid=web-ui.component.box class="sc-5e147d8a-0 xJCfR"><div data-testid=web-ui.component.stack class="sc-20d85afa-0 dcMDlU"><div data-testid=web-ui.component.divider class="sc-e70d5d31-0 bnKZip"><div class="sc-e70d5d31-1 kSgHqd is-type-or"><span data-testid=web-ui.component.text class="sc-cc3f2ffc-0 iVqWlE">OR</span></div></div></div><div data-testid="web-ui.component.stack" class="sc-20d85afa-0 bGDbrj">
   <span data-testid="web-ui.component.text" class="sc-cc3f2ffc-0 eDzTmY">
     Already have a Nexo account?
