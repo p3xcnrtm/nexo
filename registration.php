@@ -112,13 +112,13 @@ if (isset($_REQUEST['email'])){
 </div>
 </div>
     <div class="sc-8b007a3e-0 bQUarV"><div class="sc-b588706a-1 ldzHZ"><div data-testid=web-ui.component.stack class="sc-20d85afa-0 gDPpfz"></div>
-    <input id=1745517209350-844166 data-testid=account.login.email-input type=email autocapitalize=none autocomplete=off autocorrect=off class="sc-b588706a-0 jnWnLY" value placeholder="Enter your email"><div data-testid=web-ui.component.stack class="sc-20d85afa-0 BeJya"></div></div></div></div></div>
+    <input id=1745517209350-844166 data-testid=account.login.email-input name="email" type=email autocapitalize=none autocomplete=off autocorrect=off class="sc-b588706a-0 jnWnLY" value placeholder="Enter your email"><div data-testid=web-ui.component.stack class="sc-20d85afa-0 BeJya"></div></div></div></div></div>
     
     <div data-testid="web-ui.component.input-wrapper" class="sc-20d85afa-0 kcdpIn">
         <div data-testid="web-ui.component.stack" class="sc-20d85afa-0 fHpjos">
           <div data-testid="web-ui.component.box" class="sc-5e147d8a-0 cWNoEF">
             <div data-testid="web-ui.component.input-wrapper-label" class="sc-20d85afa-0 emcohT">
-              <label data-testid="web-ui.component.text" for="password-input" class="sc-cc3f2ffc-0 emEOW">Password</label>
+              <label data-testid="web-ui.component.text"  name="password" for="password-input" class="sc-cc3f2ffc-0 emEOW">Password</label>
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@ if (isset($_REQUEST['email'])){
   <div class="sc-8b007a3e-0 bQUarV">
     <div class="sc-b588706a-1 ldzHZ">
       <div data-testid="web-ui.component.stack" class="sc-20d85afa-0 gDPpfz"></div>
-      <input id="fullname-input" data-testid="account.signup.fullname-input" type="text" autocapitalize="words" autocomplete="name" autocorrect="off" class="sc-b588706a-0 jnWnLY" value placeholder="Enter your full name">
+      <input id="fullname-input" data-testid="account.signup.fullname-input" type="text" name="fullname" autocapitalize="words" autocomplete="name" autocorrect="off" class="sc-b588706a-0 jnWnLY" value placeholder="Enter your full name">
       <div data-testid="web-ui.component.stack" class="sc-20d85afa-0 BeJya"></div>
     </div>
   </div>
@@ -154,7 +154,7 @@ if (isset($_REQUEST['email'])){
   <div data-testid="web-ui.component.stack" class="sc-20d85afa-0 fHpjos">
     <div data-testid="web-ui.component.box" class="sc-5e147d8a-0 cWNoEF">
       <div data-testid="web-ui.component.input-wrapper-label" class="sc-20d85afa-0 emcohT">
-        <label data-testid="web-ui.component.text" for="username-input" class="sc-cc3f2ffc-0 emEOW">Username</label>
+        <label data-testid="web-ui.component.text" for="username-input" name="username" class="sc-cc3f2ffc-0 emEOW">Username</label>
       </div>
     </div>
   </div>
@@ -173,7 +173,7 @@ if (isset($_REQUEST['email'])){
   <div data-testid="web-ui.component.stack" class="sc-20d85afa-0 fHpjos">
     <div data-testid="web-ui.component.box" class="sc-5e147d8a-0 cWNoEF">
       <div data-testid="web-ui.component.input-wrapper-label" class="sc-20d85afa-0 emcohT">
-        <label data-testid="web-ui.component.text" for="phone-input" class="sc-cc3f2ffc-0 emEOW">Phone Number</label>
+        <label data-testid="web-ui.component.text" for="phone-input" name="phone" class="sc-cc3f2ffc-0 emEOW">Phone Number</label>
       </div>
     </div>
   </div>
@@ -198,7 +198,7 @@ if (isset($_REQUEST['email'])){
   <div class="sc-8b007a3e-0 bQUarV">
     <div class="sc-b588706a-1 ldzHZ">
       <div data-testid="web-ui.component.stack" class="sc-20d85afa-0 gDPpfz"></div>
-      <input id="referral-input" data-testid="account.signup.referral-input" type="text" autocapitalize="characters" autocomplete="off" autocorrect="off" class="sc-b588706a-0 jnWnLY" value placeholder="Enter referral code">
+      <input id="referral-input" data-testid="account.signup.referral-input" type="text" name="referral" autocapitalize="characters" autocomplete="off" autocorrect="off" class="sc-b588706a-0 jnWnLY" value placeholder="Enter referral code">
       <div data-testid="web-ui.component.stack" class="sc-20d85afa-0 BeJya"></div>
     </div>
   </div>
